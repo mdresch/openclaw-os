@@ -166,7 +166,7 @@ export default definePluginEntry({
       });
       createReadStream(absPath)
         .on("error", (err) => {
-          api.logger.warn(`[openclaw-ui-plugin] static stream error ${absPath}: ${err}`);
+          api.logger.warn(`[openclaw-os-plugin] static stream error ${absPath}: ${err}`);
           if (!res.headersSent) {
             res.writeHead(500);
           }
@@ -235,7 +235,7 @@ export default definePluginEntry({
       },
     });
     api.logger.info(
-      `[openclaw-ui-plugin] static UI route at ${ROUTE_PREFIX} (root=${STATIC_ROOT})`,
+      `[openclaw-os-plugin] static UI route at ${ROUTE_PREFIX} (root=${STATIC_ROOT})`,
     );
 
     // ── Tiny preamble injection ──────────────────────────────────────────────

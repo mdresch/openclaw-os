@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Reads ~/.openclaw/openclaw.json, builds the OpenUI claw client URL with
+ * Reads ~/.openclaw/openclaw.json, builds the OpenClaw OS claw client URL with
  * gateway+token in the URL fragment (so they never hit server logs), copies
  * to clipboard, and opens in the default browser.
  *
@@ -11,7 +11,7 @@ import { existsSync, readFileSync } from "fs";
 import { homedir } from "os";
 import { join } from "path";
 
-const PREFIX = "[openui]";
+const PREFIX = "[openclawos]";
 const log = (msg) => console.log(`${PREFIX} ${msg}`);
 const fail = (msg) => {
   console.error(`${PREFIX} ERROR: ${msg}`);
